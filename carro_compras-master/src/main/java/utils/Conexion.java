@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class Conexion {
     //Declaramos 3 variables para el pool de conexiones
-    private static String url = "jdbc:mysql://localhost:3306/carro?useTimezone=true&serverTimezone=UTC";
+    private static String url = "jdbc:mysql://localhost:3306/ejemplocarro?useTimezone=true&serverTimezone=UTC";
     //declaramos una variable para el usuario
     private static String username = "root";
     //declaramso una variable para guardar la contraseña
