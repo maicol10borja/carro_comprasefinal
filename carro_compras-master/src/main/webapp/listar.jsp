@@ -38,8 +38,17 @@
         <td><%=p.getCategoria().getNombre()%></td>
         <%if(username.isPresent()){%>
         <td><%=p.getPrecio()%></td>
-        <td><a href="<%=request.getContextPath()%>/agregar-carro?idProducto=<%=p.getIdProducto()%>">agregar</a></td>
-        <td><a href="<%=request.getContextPath()%>/productos/form?idProducto=<%=p.getIdProducto()%>">editar</a></td>
+        <td>
+            <a href="<%=request.getContextPath()%>/agregar-carro?idProducto=<%=p.getIdProducto()%>">Agregar</a>
+            |
+            <a href="<%=request.getContextPath()%>/productos/form?idProducto=<%=p.getIdProducto()%>">Editar</a>
+            |
+            <form method="post" action="<%=request.getContextPath()%>/productos" style="display:inline;">
+                <input type="hidden" name="accion" value="eliminar">
+                <input type="hidden" name="idProducto" value="<%=p.getIdProducto()%>">
+                <button type="submit" onclick="return confirm('Esta seguro de eliminar este producto')">Eliminar</button>
+            </form>
+        </td>
         <% } %>
     </tr>
     <%}%>
@@ -47,3 +56,4 @@
 
 </body>
 </html>
+
