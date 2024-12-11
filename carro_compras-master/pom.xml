@@ -65,7 +65,7 @@
                     <configuration>
                         <url>http://localhost:8080/manager/text</url>
                         <username>admin</username>
-                        <password>elvis2103</password>
+                        <password>2005</password>
                     </configuration>
                 </plugin>
 
